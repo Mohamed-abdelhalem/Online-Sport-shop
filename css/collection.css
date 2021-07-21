@@ -1,0 +1,191 @@
+/*start global*/
+.sp-head
+{
+  margin: 40px auto ;
+}
+
+/*end global*/
+
+/*start content*/
+.content .container .cards
+{
+  width: 500px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1763b8;
+  border: 2px solid #1763b8;
+  border-radius: 10px;
+  padding: 4px;
+  margin: 25px;
+}
+
+.content .container .cards:hover
+{
+
+  background-color: dodgerblue;
+  box-shadow:  0 0 10px 5px #ddd;
+  border: 2px solid #ddd;
+  transition: 0.3s ease-in-out;
+  transform: scale(1.01);
+}
+
+.content .container .cards .name-collection h1
+{
+  margin: 0;
+  font-size: 40px;
+  color: white;
+  font-weight: 900;
+  position: relative;
+}
+
+.content .container .cards .name-collection h1::before
+{
+  content: "";
+  position: absolute;
+  border: solid 15px;
+  border-color:  transparent transparent transparent white;
+  right: -45px;
+  top: 13px;
+}
+
+
+.content  button
+{
+  background-color: white;
+  border: 2px solid #1763b8;
+}
+
+.content button a
+{
+  color: #1763b8;
+  text-decoration: none;
+}
+
+.content button a:hover
+{
+  color: white;
+  text-decoration: none;
+}
+
+
+
+.content  button:hover
+{
+  background-color: #1763b8;
+  border: 2px solid white;
+  outline: none;
+}
+
+/*end content*/
+
+/*media */
+
+/*small*/
+@media (max-width : 768px)
+{
+  .container
+  {
+    width: 650px;
+  }
+
+  .content .container
+  {
+    justify-content: center;
+  }
+
+  .content .container .cards
+  {
+    width: 295px;
+  }
+
+
+  .content .container .cards .img-Photo
+  {
+    height: 200px;
+  }
+
+  .content .container .cards .name-collection h1
+  {
+    margin: 0;
+    font-size: 25px;
+    color: white;
+    font-weight: 900;
+    position: relative;
+  }
+
+  .content .container .cards .name-collection h1::before
+  {
+    content: "";
+    position: absolute;
+    border: solid 10px;
+    border-color:  transparent transparent transparent white;
+    right: -30px;
+    top: 7px;
+  }
+
+}
+
+@media (max-width : 767px)
+{
+  .content
+  {
+   padding: 10px;
+  }
+
+  .content .container
+  {
+
+    justify-content: center;
+
+  }
+
+  .content .container .cards
+  {
+    width: 300px;
+    margin: 25px 0;
+  }
+
+
+  .content .container .cards .name-collection h1
+  {
+    font-size: 25px;
+  }
+
+  .content .container .cards .name-collection h1::before
+  {
+    content: "";
+    position: absolute;
+    border: solid 10px;
+    border-color:  transparent transparent transparent white;
+    right: -30px;
+    top: 8px;
+  }
+}
+
+/* mideum*/
+@media (min-width : 992px)
+{
+
+
+}
+
+@media (min-width: 991px)
+{
+
+}
+
+/* large*/
+@media (min-width : 1200px)
+{
+
+
+}
+
+@media (max-width : 1199px)
+{
+
+}
+
+/*end media*/
