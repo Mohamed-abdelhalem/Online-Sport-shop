@@ -49,6 +49,22 @@ html
 .sp-head
 {
   margin: 0px auto 40px;
+  animation-name: sp-heading;
+  animation-duration: 1s;
+}
+
+@keyframes sp-heading
+{
+  from
+  {
+    transform: translateY(300%);
+    z-index: -1;
+  }
+  to
+  {
+ transform: translateY(0%);
+ z-index: 1;
+  }
 }
 
 .special-heading
@@ -96,7 +112,7 @@ color: #777;
 
 .dropdown-menu
 {
-    width: 120px;
+    width: 140px;
     padding: 0px;
     margin: 0px;
     font-size: 20px;
@@ -245,8 +261,9 @@ html
   height: 50px;
   margin: 25px 0px;
   border-radius: 7px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
+
 }
 
 
@@ -257,11 +274,55 @@ html
 {
   background-color: dodgerblue;
   border: 2px solid dodgerblue;
+
 }
+
+.content .container .cards:nth-child(1)
+, .content .container .cards:nth-child(3)
+, .content .container .cards:nth-child(5)
+{
+  animation-name: from-left;
+  animation-duration: 1.5s;
+}
+
+
+.content .container .cards:nth-child(2)
+, .content .container .cards:nth-child(4)
+, .content .container .cards:nth-child(6)
+{
+  animation-name: from-right;
+  animation-duration: 1.5s;
+}
+
+@keyframes from-left
+{
+  from
+  {
+    transform: translateX(-300%);
+  }
+  to
+  {
+ transform: translateX(0%);
+  }
+}
+
+@keyframes from-right
+{
+  from
+  {
+    transform: translateX(300%);
+  }
+  to
+  {
+ transform: translateX(0%);
+  }
+}
+
+
 
 .content .container .cards:hover
 {
-  background-color: #c3dae9;
+  background-color: darkblue;
 }
 
 .content .container .cards .img-photo
@@ -271,14 +332,50 @@ html
   margin: 10px 10px 30px;
 }
 
+.content .container .cards .rate
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.content .container .cards .rate .icon
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 25px;
+  font-size: 20px;
+  color: yellow;
+}
+
+.content .container .cards .rate .icon i
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.content .container .cards .rate .price
+{
+  font-size: 25px;
+  color: yellow;
+  margin-right: 25px;
+}
+
+
 .content .container .cards .size
 {
    text-align: center;
    font-size: 30px;
    width: 100%;
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-between;
    align-items: center;
+   margin-left: 50px;
 
 }
 
@@ -290,6 +387,7 @@ html
   align-items: center;
   flex-direction: row;
   width: 100%;
+  margin-left: 0px;
 }
 
 .color-content
@@ -403,11 +501,12 @@ color: white;
   .content .container .cards .size
   {
      font-size: 20px;
+     margin-left: 10px;
   }
 
-  .color
+  .color p
   {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .color-content
@@ -416,7 +515,37 @@ color: white;
     height: 20px;
     border-radius: 15px;
   }
-/*start shoes*/
+
+
+  .content .container .cards .rate .icon
+  {
+    margin: 20px 10px;
+    font-size: 15px;
+  }
+
+  .content .container .cards .rate .icon i
+  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 5px;
+  }
+
+  .content .container .cards .rate .price
+  {
+    font-size: 17px;
+    color: yellow;
+    margin-right: 15px;
+  }
+
+
+  .content .container .cards .size
+  {
+     margin-left: 20px;
+
+  }
+
+/*end shoes*/
 }
 
 @media (max-width : 767px)
